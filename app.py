@@ -167,7 +167,7 @@ def like_handler():
             "LikesGivenByAPI": likes_after - likes_before,
             "SuccessfulRequests": success_count,
             "TotalRequests": len(tokens),
-            "status": 1 if likes_after > likes_before else 2
+            "status": 1 if likes_after > likes_before else 2,
             "developer": "semy"
         })
 

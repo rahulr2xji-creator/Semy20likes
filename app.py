@@ -25,7 +25,7 @@ def load_accounts():
 
 # ✅ جلب التوكن من API
 async def fetch_token(session, uid, password):
-    url = f"https://jwtforme.vercel.app/semy?uid={uid}&password={password}"
+    url = f"https://jwtmc.vercel.app/token?uid={uid}&password={password}"
     try:
         async with session.get(url, timeout=10) as res:
             if res.status == 200:

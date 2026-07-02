@@ -89,7 +89,7 @@ def make_request(enc_uid, token):
         'Expect': "100-continue",
         'X-Unity-Version': "2018.4.11f1",
         'X-GA': "v1 1",
-        'ReleaseVersion': "OB53"
+        'ReleaseVersion': "OB54"
     }
     try:
         res = requests.post(url, data=bytes.fromhex(enc_uid), headers=headers, verify=False)
@@ -109,7 +109,7 @@ async def send_request(enc_uid, token):
         'Expect': "100-continue",
         'X-Unity-Version': "2018.4.11f1",
         'X-GA': "v1 1",
-        'ReleaseVersion': "OB53"
+        'ReleaseVersion': "OB54"
     }
     try:
         async with aiohttp.ClientSession() as session:

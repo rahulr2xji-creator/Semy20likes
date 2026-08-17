@@ -34,7 +34,7 @@ async def fetch_token(session, uid, password):
                     data = json.loads(text)
                     if isinstance(data, list) and len(data) > 0 and "jwt" in data[0]:
                         return data[0]["jwt"]
-                    elif isinstance(data, dict) and "token" in data:
+                    elif isinstance(data, dict) and "jwt" in data:
                         return data["jwt"]
                 except:
                     return None

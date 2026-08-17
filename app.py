@@ -25,17 +25,17 @@ def load_accounts():
 
 # ✅ جلب التوكن من API
 async def fetch_token(session, uid, password):
-    url = f"https://jwtmc.vercel.app/token?uid={uid}&password={password}"
+    url = f"https://jwtsemy1.up.railway.app/semy?uid={uid}&password={password}"
     try:
         async with session.get(url, timeout=10) as res:
             if res.status == 200:
                 text = await res.text()
                 try:
                     data = json.loads(text)
-                    if isinstance(data, list) and len(data) > 0 and "token" in data[0]:
-                        return data[0]["token"]
+                    if isinstance(data, list) and len(data) > 0 and "jwt" in data[0]:
+                        return data[0]["jwt"]
                     elif isinstance(data, dict) and "token" in data:
-                        return data["token"]
+                        return data["jwt"]
                 except:
                     return None
     except:
